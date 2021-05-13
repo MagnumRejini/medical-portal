@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert test data in doctor table"
+      author: maksim_rehino
+      changes:
+        - insert:
+            tableName: doctor
+            columns:
+              - column:
+                  name: name
+                  value: "name"
+              - column:
+                  name: speciality
+                  value: "speciality"
+              - column:
+                  name: category
+                  value: "category"
+              - column:
+                  name: work_experience
+                  value: "work_experience"
+              - column:
+                  name: graduation
+                  value: "graduation"
+              - column:
+                  name: img
+                  value: "img"
+              - column:
+                  name: phone
+                  value: "+375-29-222-22-22"
+              - column:
+                  name: email
+                  value: "email@mail.ru"
+              - column:
+                  name: med_center_id
+                  value: 1

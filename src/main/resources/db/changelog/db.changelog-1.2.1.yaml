@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create category table"
+      author: maksim_rehino
+      changes:
+        - createTable:
+            tableName: service_medcenter
+            columns:
+              - column:
+                  name: service_id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: medcenter_id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseColumnNames: service_id
+                  baseTableName: service_medcenter
+                  constraintName: fk_service
+                  referencedColumnNames: id
+                  referencedTableName: service
+              - addForeignKeyConstraint:
+                  baseColumnNames: medcenter_id
+                  baseTableName: service_medcenter
+                  constraintName: fk_medcenter
+                  referencedColumnNames: id
+                  referencedTableName: medical_center

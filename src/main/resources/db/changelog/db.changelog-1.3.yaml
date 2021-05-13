@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create phone_number table"
+      author: maksim_rehino
+      changes:
+        - createTable:
+            tableName: phone_number
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: number
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: med_center_id
+                  type: integer
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseColumnNames: med_center_id
+            baseTableName: phone_number
+            constraintName: fk_med_center
+            referencedColumnNames: id
+            referencedTableName: medical_center

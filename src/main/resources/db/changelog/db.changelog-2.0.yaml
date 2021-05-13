@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert test data in medical_center table"
+      author: maksim_rehino
+      changes:
+        - insert:
+            tableName: medical_center
+            columns:
+              - column:
+                  name: name
+                  value: "Альфамед"
+              - column:
+                  name: fullname
+                  value: "Медицинский центр «Альфамед»"
+              - column:
+                  name: address
+                  value: "г.Минск, пр-т Независимости, 85"
+              - column:
+                  name: description
+                  value: "Медицинский центр «Альфамед» — частное унитарное предприятие, открывшее свои двери для пациентов в 2001 году. Медицинский центр оказывает весь спектр медицинских услуг для жителей столицы и гостей Минска, радуя безупречным сервисом и индивидуальным подходом к каждому пациенту."
+              - column:
+                  name: building_img
+                  value: "centers_img/alfamed.jpg"
+              - column:
+                  name: logo_img
+                  value: "centers_img/alfamed_logo.jpg"
+              - column:
+                  name: iframe
+                  value: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.483303816239!2d27.601679516037336!3d53.923157039049556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf0612974cb9%3A0x1b167de468817508!2z0JDQu9GM0YTQsNC80LXQtA!5e0!3m2!1sru!2sby!4v1610760486018!5m2!1sru!2sby"
+              - column:
+                  name: coord
+                  value: "53.919774, 27.601318"
+              - column:
+                  name: schedule
+                  value: "08:00—21:00"

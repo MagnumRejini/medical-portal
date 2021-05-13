@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create medical_center table"
+      author: maksim_rehino
+      changes:
+        - createTable:
+            tableName: medical_center
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(30)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: fullname
+                  type: varchar(70)
+                  constraints:
+                    unique: true
+              - column:
+                  name: address
+                  type: varchar(70)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(2048)
+              - column:
+                  name: building_img
+                  type: varchar(60)
+              - column:
+                  name: logo_img
+                  type: varchar(60)
+              - column:
+                  name: iframe
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: coord
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: schedule
+                  type: varchar(30)
+                  constraints:
+                    nullable: false

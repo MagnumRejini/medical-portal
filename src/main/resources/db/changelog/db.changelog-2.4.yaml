@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert test data in service table"
+      author: maksim_rehino
+      changes:
+        - insert:
+            tableName: service
+            columns:
+              - column:
+                  name: title
+                  value: "title"
+              - column:
+                  name: price
+                  value: 5.55
+              - column:
+                  name: category_id
+                  value: 1
+              - column:
+                  name: med_center_id
+                  value: 1

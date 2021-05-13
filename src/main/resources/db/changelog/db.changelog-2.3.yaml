@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert test data in phone_numbers table"
+      author: maksim_rehino
+      changes:
+        - insert:
+            tableName: phone_number
+            columns:
+              - column:
+                  name: number
+                  value: "+375 29 637-00-00"
+              - column:
+                  name: med_center_id
+                  value: 1
+        - insert:
+            tableName: phone_number
+            columns:
+              - column:
+                  name: number
+                  value: "+375 17 336-45-16"
+              - column:
+                  name: med_center_id
+                  value: 1

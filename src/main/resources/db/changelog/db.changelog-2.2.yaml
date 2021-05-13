@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert test data in category table"
+      author: maksim_rehino
+      changes:
+        - insert:
+            tableName: category
+            columns:
+              - column:
+                  name: title
+                  value: "Дерматология"
+              - column:
+                  name: logo
+                  value: "logo"
+              - column:
+                  name: speciality
+                  value: "speciality"

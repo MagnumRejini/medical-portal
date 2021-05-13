@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create doctor table"
+      author: maksim_rehino
+      changes:
+        - createTable:
+            tableName: doctor
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(60)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: speciality
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: work_experience
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: graduation
+                  type: varchar(80)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: img
+                  type: varchar(80)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: phone
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(60)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: med_center_id
+                  type: integer
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseColumnNames: med_center_id
+            baseTableName: doctor
+            constraintName: fk_medcenter_doctor
+            referencedColumnNames: id
+            referencedTableName: medical_center
